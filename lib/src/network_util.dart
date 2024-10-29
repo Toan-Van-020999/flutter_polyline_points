@@ -53,6 +53,7 @@ class NetworkUtil {
             ],
             endAddress: route["legs"].last['end_address'],
             startAddress: route["legs"].first['start_address'],
+            route: route,
           ));
         }
       } else {
