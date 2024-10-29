@@ -29,6 +29,7 @@ class PolylineResult {
   String? endAddress;
   String? startAddress;
   String? overviewPolyline;
+  dynamic route;
 
   PolylineResult(
       {this.status,
@@ -43,5 +44,6 @@ class PolylineResult {
       this.totalDurationValue,
       this.endAddress,
       this.startAddress,
+      this.route,
       this.overviewPolyline});
 }
