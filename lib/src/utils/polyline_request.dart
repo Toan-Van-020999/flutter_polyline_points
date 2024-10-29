@@ -39,6 +39,8 @@ class PolylineRequest {
   /// an integer in seconds since midnight,
   final int? departureTime;
 
+  final String? language;
+
   final Uri? proxy;
 
   final Map<String, String>? headers;
@@ -58,6 +60,7 @@ class PolylineRequest {
     this.arrivalTime,
     this.departureTime,
     this.transitMode,
+    this.language
   });
 
   void validateKey(String? key) {
@@ -77,7 +80,8 @@ class PolylineRequest {
       "alternatives": "$alternatives",
       "arrival_time": arrivalTime,
       "departure_time": departureTime,
-      "transit_mode": transitMode
+      "transit_mode": transitMode,
+      "language": language
     });
     if (wayPoints.isNotEmpty) {
       List wayPointsArray = [];
